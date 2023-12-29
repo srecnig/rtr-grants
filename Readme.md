@@ -27,12 +27,15 @@ in general, this should work for any json returned by RTR, but it's more a proof
 
 #### i just want to query the data!
 
-this is all made for `sqlite3``. do the following
+this is all made for `sqlite3`. do the following
 
 0. clone the repository
 1. hopefully, your OS includes `sqlite3`
 2. create a new database and pass in the create-table script: `sqlite3 test.db < 2023-12-29-create-table.sql`
 3. feed in the data: `sqlite3 test.db < 2023-12-29-insert-into.sql`
+4. open a shell in `sqlite3 test.db`
+5. run queries like: `SELECT foerderungsnehmer, sum(foerderbetrag) AS foerderung FROM rtr_data GROUP BY foerderungsnehmer HAVING foerderung > 1000000 ORDER BY foerderung DESC;`
+6. just have a look at the json or the create table to see what data is available
 
 ### legal and stuff
 
