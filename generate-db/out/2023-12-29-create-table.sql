@@ -1,0 +1,1 @@
+CREATE TABLE rtr_data (unternehmensverbund VARCHAR, foerderungsnehmer VARCHAR, sendername_druckschrift VARCHAR, projekttitel VARCHAR, foerderungsart VARCHAR, kategorie VARCHAR, subkategorie VARCHAR, foerderbetrag DECIMAL, jahr INTEGER, einreichtermin VARCHAR);
